@@ -1051,6 +1051,19 @@ nav:hover {
   background: rgba(12,12,12,1);
 }
 
+.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .modal-body-col {
   padding-top: 40px;
 }
@@ -1079,7 +1092,8 @@ nav:hover {
   color: #F7F6F9;
   z-index: 4;
   position: relative;
-  margin-top: -16px;
+  /*margin-top: -16px; FA */
+  margin-top: -30px;
 }
 
 .modal-close:hover {
@@ -1098,6 +1112,14 @@ nav:hover {
 
 .social-modal-wrap {
   margin-top: 5px;
+}
+
+.social-modal-wrap a {
+  height: 62px;
+  background: transparent;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
 }
 
 .social-modal-wrap a:hover {
@@ -1252,7 +1274,8 @@ input.email-modal:-moz-placeholder {
     padding-top: 100px;
   }
   .modal-close {
-    margin-top: -16px;
+    /*margin-top: -16px;*/
+    margin-top: -30px;
   }
 }
 

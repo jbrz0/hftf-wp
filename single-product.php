@@ -1,4 +1,7 @@
 <?php
+
+/* Template Name: Product Template */
+
 get_header();
 ?>
 <div id="primary" class="site-content">

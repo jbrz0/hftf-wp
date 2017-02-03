@@ -1,10 +1,6 @@
 <?php
-get_header();
+if (in_category('15')) {include (TEMPLATEPATH . '/single-product.php');
+}
+else { include (TEMPLATEPATH . '/single-article.php');
+}
 ?>
-<div id="primary" class="site-content">
-  <div id="content" role="main">
-    <p>Article</p>
-  </div>
-</div>
-
-<?php get_footer(); ?>

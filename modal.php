@@ -1,17 +1,18 @@
 <!-- Modal -->
-<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel">
+<div class="modal fade fade-scale" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <div class="container">
 
         <a href="#" data-dismiss="modal" aria-label="Close">
-          <i class="fa fa-times modal-close" aria-hidden="true"></i>
+          <!-- <i class="fa fa-times modal-close" aria-hidden="true"></i> -->
+          <i class="icon ion-ios-close-outline modal-close"></i>
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo-bottom.svg" class="logo-modal" alt="">
         </a>
 
         <div class="social-modal-wrap">
-          <a href="#">
+          <a href="http://facebook.com/homesfromthefuture">
             <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-01.svg" alt="Facebook">
           </a>
           <a href="#">
