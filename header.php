@@ -17,7 +17,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
-<title>HFTF: <?php wp_title(''); ?></title>
+<title>HFTF: <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/img/icons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/img/icons/apple-icon-60x60.png">

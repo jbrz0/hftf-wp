@@ -1568,7 +1568,8 @@ Product Page
   width: 500px;
   float: right;
   height: 117px;
-  z-index: -1;
+  /*z-index: -1;*/
+  z-index: 1;
   background: #F7F6F9;
 }
 
@@ -1601,7 +1602,7 @@ Post page
 
 .title-txt p {
   font-size: 1.3em;
-  color: #FFC857;
+  /*color: #FFC857;*/
 }
 
 .title-header-img {
