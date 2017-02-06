@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (function_exists('add_theme_support'))
 {
     // Add Menu Support
@@ -14,6 +16,8 @@ if (function_exists('add_theme_support'))
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
+
+
 
 }
 
@@ -79,17 +83,6 @@ function getCustomField($theField) {
     }
 }
 
-// Scripts
-// function my_scripts() {
-// wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js');
-// wp_enqueue_script('jquery');
-// wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-// wp_enqueue_script('bootstrap');
-// wp_register_script('custom-script', get_template_directory_uri() . '/assets/js/script.js','', true);
-// wp_enqueue_script('custom-script');
-
-// }
-// add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
 // Remove default image link in dashboard
 function wpb_imagelink_setup() {
@@ -137,5 +130,14 @@ function content($limit) {
 //      $max = 24;
 //     return substr( $title, 0, $max ). "&nbsp;&nbsp;&nbsp;";
 // }
+
+// add_action('init','yoursite_init');
+// function yoursite_init() {
+//   global $wp_rewrite;
+//                 add_rewrite_rule("author/([^/]+)/page/?([0-9]{1,})/?$",'index.php?author_name=$matches[1]&paged=$matches[2]','top');
+//                 add_rewrite_rule("(.+?)/page/?([0-9]{1,})/?$",'index.php?category_name=$matches[1]&paged=$matches[2]','top');
+//                 $wp_rewrite->flush_rules(false);
+// }
+
 
 ?>

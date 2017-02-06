@@ -1,3 +1,5 @@
+
+
 <div class="footer-wrap col-md-12">
     <div class="col-md-6">
       <div class="footer-logo-wrap">
@@ -31,24 +33,25 @@
         </a>
       </div> -->
       <div class="button-footer-wrap button-footer-social-wrap">
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-01.svg" class="social-footer-btn" alt="">
+        <a href="http://facebook.com/homesfromthefuture">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-01.svg" class="social-footer-btn" alt="Facebook">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-02.svg" class="social-footer-btn" alt="">
+        <a href="https://www.instagram.com/hftf_technology/">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-02.svg" class="social-footer-btn" alt="Instagram">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-03.svg" class="social-footer-btn" alt="">
+        <a href="https://twitter.com/hftf_tech">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-03.svg" class="social-footer-btn" alt="Twitter">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-04.svg" class="social-footer-btn" alt="">
+        <a href="https://homesfromthefuture.tumblr.com/">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-04.svg" class="social-footer-btn" alt="Tumblr">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-05.svg" class="social-footer-btn" class="social-footer-btn" alt="">
+        <a href="https://www.youtube.com/channel/UCLfNQlbCAelRZxhmmPHEAmQ">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-05.svg" class="social-footer-btn" alt="Youtube">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/social-footer-06.svg" class="social-footer-btn" alt="">
+        <a href="https://www.pinterest.com/hftf_tech/">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-06.svg" class="social-footer-btn" alt="Pinterest">
         </a>
+
       </div>
 
     </div>
@@ -58,5 +61,26 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/inview.min.js"></script>
+<script>
+
+$('.footer-wrap').on('inview', function(event, isInView) {
+if (isInView) {
+  $('.left-product-col').fadeTo(250, 0, function(){
+    $('.left-product-col').css("visibility", "hidden");
+  });
+} else {
+  $('.left-product-col').fadeTo(250, 1, function(){
+    $('.left-product-col').css("visibility", "visible");
+  });
+}
+});
+
+</script>
+
+
+
+
+<?php wp_footer(); ?>
 </body>
 </html>

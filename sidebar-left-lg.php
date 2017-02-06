@@ -69,24 +69,31 @@
       </span>
 
       <ul class="sidebar-list-top sidebarlist-top-left">
-        <?php global $query_string;
-        $posts = query_posts($query_string.'&posts_per_page=3&order=DESC&cat=15'); ?>
-        	<?php while(have_posts()) : the_post(); ?>
-          <li>
-            <div class="col-md-3 image-home-list">
-              <!-- <img src="img/product-thumb.jpg" alt="Product Image" /> -->
-            </div>
-            <div class="col-md-9 sidebar-image-list">
-              <a href="<?php echo get_permalink() ?>">
-                <p class="sidebar-product-name">
-                  <?php the_title(); ?>
-                </p>
-              </a>
-            </div>
-            <div class="clearfix"></div>
+
+        <?php $catPosts = new WP_Query( '&posts_per_page=3&order=DESC&cat=15' );
+        if( $catPosts->have_posts() ){ ?>
+            <li>
+
+            <?php while ($catPosts->have_posts()) : $catPosts->the_post(); ?>
+                <div class="col-md-9 sidebar-image-list">
+                  <a href="<?php echo get_permalink() ?>">
+                    <p class="sidebar-product-name">
+                      <?php the_title(); ?>
+                    </p>
+                  </a>
+                </div>
+                <div class="clearfix"></div>
+            <?php endwhile; ?>
+
           </li>
-          <?php endwhile; ?>
-        <?php wp_reset_query(); ?>
+        <?php }
+        else {
+          // no posts to display
+        }
+        wp_reset_postdata();
+        ?>
+
+
       </ul>
 
     </div> <!-- sidebar-left-content -->

@@ -6,6 +6,15 @@
 - title home page cutoff letters
 - top articles and products -> github popular posts plugin
 - all products/articles page & links
+- dynamic cat list sidebar
+- paginate categories
+- category/post image background specifics
+- whois private
+- featured images category specific
+    Plugin: Category Featured Images
+- affiliate links
+- icon for product page
+- products page
 
 // Plugins
 Mailchimp for wordpress
