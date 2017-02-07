@@ -15,8 +15,11 @@
 - affiliate links
 - icon for product page
 - products page
+- table maintenance
+
 
 // Plugins
 Mailchimp for wordpress
 WP Custom Post Template
+WP Canvas - Responsive Videos
 XML Sitemap & Google News feeds ?

@@ -1623,6 +1623,7 @@ Post page
 .title-txt p {
   font-size: 1.3em;
   /*color: #FFC857;*/
+  text-shadow: 2px 2px #0C0C0C;
 }
 
 .title-header-img {
@@ -1681,7 +1682,10 @@ Post page
 
 .post-content a,
 .post-content a p,
-.post-content p a {
+.post-content p a,
+.right-col-product-inner a,
+.right-col-product-inner a p,
+.right-col-product-inner p a {
   color: #470DF4;
   font-weight: bold !important;
   display: inline;
@@ -1692,15 +1696,18 @@ Post page
   max-width: 1000px;
   display: block;
   margin: 40px 0;
+  height: auto;
 }
 
-.post-content p {
+.post-content p,
+.right-col-product-inner p {
   font-size: 1.4em;
   line-height: 1.6em;
   margin: 40px 0;
 }
 
-.post-content h2{
+.post-content h2,
+.right-col-product-inner h2 {
   font-family: 'Roboto', sans-serif;
   margin-top: 0px;
 }
@@ -1714,7 +1721,8 @@ blockquote {
   margin: 40px 0;
 }
 
-.post-content ul {
+.post-content ul,
+.right-col-product-inner ul {
   list-style-type: none;
   padding-left: 0;
   margin: 40px auto 40px;
@@ -1722,7 +1730,14 @@ blockquote {
   font-weight: 300;
 }
 
-.post-content ul li:before {
+.post-content ul li,
+.right-col-product-inner ul li {
+  text-indent: -50px;
+  padding-left: 50px;
+}
+
+.post-content ul li:before,
+.right-col-product-inner ul li:before {
   content: ' ';
   border: 3px solid #FFC857;
   width: 30px;
@@ -2001,6 +2016,13 @@ Products Page
 
 .right-col-product-inner p {
   font-size: 1.4em;
+  margin-bottom: 30px;
+}
+
+.right-col-product-inner p img {
+  width: 100%;
+  height: auto;
+  /*margin: 30px 0 0 0;*/
 }
 
 .product-subtitle {
@@ -2100,13 +2122,29 @@ Products Page
   color: #0C0C0C;
 }
 
+.table p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
 .table>thead>tr>td, .table>thead>tr>th {
   border: none;
+}
+
+.table>tr:last-child {
+  display: none;
 }
 
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th {
   border-top: 1px solid #470DF4;
   padding: 10px;
+  font-size: 14px;
+}
+
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th{
+  font-size: 14px;
+  font-weight: 300;
 }
 
 @media (max-width: 767px) {
