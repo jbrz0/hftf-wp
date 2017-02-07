@@ -1,11 +1,12 @@
 <!-- Sidebar right content MOBILE -->
 <div class="col-sm-6 sidebar sidebar-right sidebar-right-sm">
 
-  <form>
-    <div class="form-group">
-      <input type="text" class="form-control search-top" id="mailingList" placeholder="Search">
-    </div>
-
+  <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+    <input type="search" placeholder="Search" class="form-control search-top"
+      value="<?php echo get_search_query() ?>" name="s"
+      title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+    <!-- <input type="submit" class="search-submit"
+      lue="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" /> -->
   </form>
 
   <div class="sidebar-header sidebar-right-header">
@@ -19,20 +20,14 @@
     </span>
 
     <ul class="sidebar-list sidebar-list-right">
-      <a href="#">
-        <li><span>Kits &amp; Hubs</span></li>
+      <a href="<?php echo home_url( '/' ); ?>category/articles/apps/">
+        <li><span>Apps</span></li>
       </a>
-      <a href="#">
-        <li><span>Sensors</span></li>
+      <a href="<?php echo home_url( '/' ); ?>category/articles/hardware/">
+        <li><span>Hardware</span></li>
       </a>
-      <a href="#">
-        <li><span>Switches</span></li>
-      </a>
-      <a href="#">
-        <li><span>Cameras</span></li>
-      </a>
-      <a href="#">
-        <li><span>Devices</span></li>
+      <a href="<?php echo home_url( '/' ); ?>category/articles/guides/">
+        <li><span>Guides</span></li>
       </a>
     </ul>
 
@@ -41,45 +36,30 @@
     </span>
 
     <ul class="sidebar-list-top sidebarlist-top-right">
-      <li>
-        <div class="col-md-3 image-home-list">
-          <img src="img/product-thumb.jpg" alt="Product Image" />
-        </div>
-        <div class="col-md-9 sidebar-image-list">
-          <a href="#">
-            <p class="sidebar-product-name">
-              A vulputate sagittis facilisi vestibulum quam.
-            </p>
-          </a>
-        </div>
-      <div class="clearfix"></div>
-      </li>
-      <li>
-        <div class="col-md-3 image-home-list">
-          <img src="img/product-thumb.jpg" alt="Product Image" />
-        </div>
-        <div class="col-md-9 sidebar-image-list">
-          <a href="#">
-            <p class="sidebar-product-name">
-              A vulputate sagittis facilisi vestibulum quam.
-            </p>
-          </a>
-        </div>
-      <div class="clearfix"></div>
-      </li>
-      <li>
-        <div class="col-md-3 image-home-list">
-          <img src="img/product-thumb.jpg" alt="Product Image" />
-        </div>
-        <div class="col-md-9 sidebar-image-list">
-          <a href="#">
-            <p class="sidebar-product-name">
-              A vulputate sagittis facilisi vestibulum quam.
-            </p>
-          </a>
-        </div>
-      <div class="clearfix"></div>
-      </li>
+
+      <?php $catPosts = new WP_Query( '&posts_per_page=3&order=DESC&cat=17' );
+      if( $catPosts->have_posts() ){ ?>
+          <li>
+
+          <?php while ($catPosts->have_posts()) : $catPosts->the_post(); ?>
+              <div class="col-md-9 sidebar-image-list">
+                <a href="<?php echo get_permalink() ?>">
+                  <p class="sidebar-product-name">
+                    <?php the_title(); ?>
+                  </p>
+                </a>
+              </div>
+              <div class="clearfix"></div>
+          <?php endwhile; ?>
+
+        </li>
+      <?php }
+      else {
+        // no posts to display
+      }
+      wp_reset_postdata();
+      ?>
+
     </ul>
 
   </div> <!-- sidebar-left-content -->
