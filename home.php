@@ -86,7 +86,7 @@
         <?php endwhile; ?>
         <?php wp_reset_query(); // reset the query ?>
 
-        <?php global $query_string; // required
+        <?php global $query_string;
         $posts = query_posts($query_string.'&posts_per_page=1&order=DESC&offset=4'); ?>
           <?php while(have_posts()) : the_post(); ?>
             <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
@@ -102,10 +102,28 @@
             </div>
             </a>
           <?php endwhile; ?>
-          <?php wp_reset_query(); // reset the query ?>
+          <?php wp_reset_query(); ?>
+
+          <?php global $query_string;
+          $posts = query_posts($query_string.'&posts_per_page=1&order=DESC&offset=5'); ?>
+            <?php while(have_posts()) : the_post(); ?>
+              <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+              <a href="<?php echo get_permalink() ?>" class="post-link-wrap">
+              <div class="col-sm-4 post-tall-wrap-third">
+                <div class="post-tall-inner">
+                  <div class="img-wrap-home"><img src="<?php echo $url ?>" alt=""></div>
+                  <div class="post-home-txt">
+                    <h2><?php the_title(); ?></h2>
+                    <h4><?php the_time('F jS, Y'); ?></h4>
+                  </div>
+                </div>
+              </div>
+              </a>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
 
 
-          <?php global $query_string; // required
+          <!-- <?php global $query_string;
           $posts = query_posts($query_string.'&posts_per_page=1&order=DESC&offset=5'); ?>
             <?php while(have_posts()) : the_post(); ?>
               <a href="<?php echo get_permalink() ?>" class="post-link-wrap">
@@ -114,13 +132,15 @@
                   <div class="post-home-txt" style="padding-top: 15px;">
                     <h2><?php the_title(); ?></h2>
                     <h4><?php the_time('F jS, Y'); ?></h4>
-                    <p><?php echo excerpt(16); ?></p>
+                    <p>
+                      <?php echo excerpt(16); ?>
+                    </p>
                   </div>
                 </div>
               </div>
               </a>
             <?php endwhile; ?>
-            <?php wp_reset_query(); // reset the query ?>
+            <?php wp_reset_query(); ?> -->
 
       </div> <!-- home fourth row wrap end -->
 

@@ -371,7 +371,7 @@ input.mailing-list-top:-moz-placeholder { /* Firefox 18- */
  }
  .sidebar-image-list {
    width: 100%;
-   margin-bottom: 20px;
+   /*margin-bottom: 20px;*/
  }
 }
 
@@ -434,6 +434,17 @@ input.mailing-list-top:-moz-placeholder { /* Firefox 18- */
 .sidebar-left-sm,
 .sidebar-right-sm {
   display: none;
+}
+
+@media (min-width: 793px) and (max-width: 991px) {
+  .sidebar-left-lg,
+  .sidebar-right-lg {
+    display: none;
+  }
+  .sidebar-left-sm,
+  .sidebar-right-sm {
+    display: block;
+  }
 }
 
 @media (max-width: 991px) {
@@ -508,8 +519,10 @@ Page Middle Section
 .post-home-txt {
   display: inline-block;
   /*padding: 10px 30px 60px;*/
-  padding: 10px 30px 17px;
-  word-break: break-word;
+  /*padding: 10px 30px 17px;*/
+  padding: 12px 18px 17px 18px;
+  /*word-break: break-word;*/
+  word-break: normal;
 }
 
 .post-home-txt h2 {
@@ -708,7 +721,14 @@ Page Middle Section
 
 .post-tall-top {
   margin-top: 15px;
-  height: 455px;
+  /*height: 455px;*/
+  height: 520px;
+}
+
+@media(max-width: 1390px) {
+  .post-tall-top {
+    height: 455px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2099,3 +2119,11 @@ Products Page
 }
 
 /*OVERRIDE END*/
+
+
+/*@media (min-width: 793px) {
+  .sidebar-left-lg, {
+    display: none !important;
+    opacity: 0.5;
+  }
+}*/
