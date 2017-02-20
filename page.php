@@ -15,7 +15,6 @@
           <h1><?php the_title(); ?></h1>
           <p><?php echo do_shortcode( get_post_meta( get_the_id(), 'subtitle', true ) ); ?></p>
         </div>
-        <span class="date-post"><?php the_time('F jS, Y'); ?></span>
       </div> <!-- title-header-overlay -->
     </div> <!-- title-header-img -->
 
