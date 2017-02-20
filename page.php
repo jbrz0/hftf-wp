@@ -19,12 +19,6 @@
       </div> <!-- title-header-overlay -->
     </div> <!-- title-header-img -->
 
-    <div class="tag-box-wrap">
-      <div class="tag-box">
-        <?php the_tags('<span>', '&nbsp;&nbsp;&nbsp;', '</span>'); ?>
-      </div>
-    </div> <!-- tag box wrap -->
-
 
     <div class="col-md-12 post-content">
 
