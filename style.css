@@ -2169,3 +2169,11 @@ Products Page
     opacity: 0.5;
   }
 }*/
+
+/* dynamic pagination last post global btn current */
+.post-btn-wrap a:last-child {
+  display: none;
+}
+.post-btn-wrap a:first-child div {
+  width: 100%;
+}
