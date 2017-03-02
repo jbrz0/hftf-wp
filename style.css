@@ -1655,6 +1655,9 @@ Post page
   padding: 8px 14px;
   font-style: italic;
   color: #F7F6F9;
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .tag-box a:hover {
