@@ -1679,7 +1679,8 @@ Post page
 }
 
 .post-content {
-  padding: 50px 0 40px;
+  /*padding: 50px 0 40px;*/
+  padding: 0px 0 40px;
   color: #0C0C0C;
 }
 
