@@ -11,7 +11,7 @@
         <div class="title-txt">
           <!-- <h1>Articles: <?php echo get_cat_name($cat); ?></h1> -->
           <h1>
-            Results for: <?php echo get_search_query(); ?>
+            Results for: <?php single_tag_title(); ?>
           </h1>
         </div>
       </div> <!-- title-header-overlay -->
