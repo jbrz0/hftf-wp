@@ -39,7 +39,7 @@
       Recent <span class="blue-highlight">Products</span>
     </span>
 
-    
+
 
     <ul class="sidebar-list-top sidebarlist-top-left">
 
