@@ -721,8 +721,8 @@ Page Middle Section
 
 .post-tall-top {
   margin-top: 15px;
-  /*height: 455px;*/
-  height: 520px;
+  height: 455px;
+  /*height: 520px;*/
 }
 
 @media(max-width: 1390px) {
