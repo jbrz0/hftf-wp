@@ -36,15 +36,15 @@
         <a href="http://facebook.com/homesfromthefuture">
           <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-01.svg" class="social-footer-btn" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com/hftf_technology/">
+        <!-- <a href="https://www.instagram.com/hftf_technology/">
           <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-02.svg" class="social-footer-btn" alt="Instagram">
-        </a>
+        </a> -->
         <a href="https://twitter.com/hftf_tech">
           <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-03.svg" class="social-footer-btn" alt="Twitter">
         </a>
-        <a href="https://homesfromthefuture.tumblr.com/">
+        <!-- <a href="https://homesfromthefuture.tumblr.com/">
           <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-04.svg" class="social-footer-btn" alt="Tumblr">
-        </a>
+        </a> -->
         <a href="https://www.youtube.com/channel/UCLfNQlbCAelRZxhmmPHEAmQ">
           <img src="<?php echo get_template_directory_uri(); ?>/img/social-modal-05.svg" class="social-footer-btn" alt="Youtube">
         </a>

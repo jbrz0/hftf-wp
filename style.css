@@ -917,6 +917,7 @@ Footer
 .mailing-list-footer-btn {
   float: right;
   clear: both;
+  border-radius: 0px !important;
 }
 
 .mailing-list-footer {
@@ -1167,7 +1168,7 @@ nav:hover {
   color: #F7F6F9;
   font-size: 2em;
   margin-top: 20px;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
