@@ -1,12 +1,7 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
-
-
   <?php include 'sidebar-left-lg.php'; ?>
 
-
     <div class="col-md-6 main-area main-area-home">
-
-
       <?php global $query_string; // required
       $posts = query_posts($query_string.'&posts_per_page=1&order=DESC'); ?>
       	<?php while(have_posts()) : the_post(); ?>
@@ -26,7 +21,6 @@
           </div>
       	<?php endwhile; ?>
       	<?php wp_reset_query(); // reset the query ?>
-
 
       <div class="home-second-row-wrap">
         <?php global $query_string; // required
@@ -122,26 +116,6 @@
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
 
-
-          <!-- <?php global $query_string;
-          $posts = query_posts($query_string.'&posts_per_page=1&order=DESC&offset=5'); ?>
-            <?php while(have_posts()) : the_post(); ?>
-              <a href="<?php echo get_permalink() ?>" class="post-link-wrap">
-              <div class="col-sm-4 post-tall-wrap-third">
-                <div class="post-tall-inner-txt">
-                  <div class="post-home-txt" style="padding-top: 15px;">
-                    <h2><?php the_title(); ?></h2>
-                    <h4><?php the_time('F jS, Y'); ?></h4>
-                    <p>
-                      <?php echo excerpt(16); ?>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              </a>
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?> -->
-
       </div> <!-- home fourth row wrap end -->
 
       <div class="home-second-row-wrap home-last-row-sm">
@@ -183,22 +157,16 @@
             <?php wp_reset_query(); // reset the query ?>
 
       </div> <!-- home-fourth-row-wrap -->
-
     </div>
   </div> <!-- main content area end -->
 
+<?php include 'sidebar-right-lg.php'; ?>
 
-  <?php include 'sidebar-right-lg.php'; ?>
+</div> <!-- content-wrap -->
 
-  </div> <!-- content-wrap -->
-
-
-  <?php include 'sidebar-left-sm.php'; ?>
-  <?php include 'sidebar-right-sm.php'; ?>
+<?php include 'sidebar-left-sm.php'; ?>
+<?php include 'sidebar-right-sm.php'; ?>
 
 <!-- Sidebar Mobile End -->
-
-
-
 
 <?php get_footer(); ?>

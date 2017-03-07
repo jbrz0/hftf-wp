@@ -1,12 +1,8 @@
-<!-- Sidebar right content MOBILE -->
 <div class="col-sm-6 sidebar sidebar-right sidebar-right-sm">
-
   <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
     <input type="search" placeholder="Search" class="form-control search-top"
       value="<?php echo get_search_query() ?>" name="s"
       title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-    <!-- <input type="submit" class="search-submit"
-      lue="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" /> -->
   </form>
 
   <div class="sidebar-header sidebar-right-header">
@@ -14,11 +10,9 @@
   </div>
 
   <div class="sidebar-left-content">
-
     <span class="sidebar-list-header">
       Categories
     </span>
-
     <ul class="sidebar-list sidebar-list-right">
       <a href="<?php echo home_url( '/' ); ?>category/articles/apps/">
         <li><span>Apps</span></li>
@@ -36,11 +30,9 @@
     </span>
 
     <ul class="sidebar-list-top sidebarlist-top-right">
-
       <?php $catPosts = new WP_Query( '&posts_per_page=3&order=DESC&cat=17' );
       if( $catPosts->have_posts() ){ ?>
           <li>
-
           <?php while ($catPosts->have_posts()) : $catPosts->the_post(); ?>
               <div class="col-md-9 sidebar-image-list">
                 <a href="<?php echo get_permalink() ?>">
@@ -51,17 +43,14 @@
               </div>
               <div class="clearfix"></div>
           <?php endwhile; ?>
-
-        </li>
-      <?php }
-      else {
-        // no posts to display
-      }
-      wp_reset_postdata();
-      ?>
-
+          </li>
+        <?php }
+        else {
+          // no posts to display
+        }
+        wp_reset_postdata();
+        ?>
     </ul>
 
   </div> <!-- sidebar-left-content -->
   </div>
-<!-- Sidebar right mobile content end -->

@@ -23,15 +23,12 @@
 
     <div class="col-md-6 product-col-wrap">
       <div class="left-product-col">
-
         <span class="product-cat"><?php echo get_cat_name($cat); ?></span>
-
         <h1 class="product-title"><?php echo the_title() ?></h1>
 
         <h2 class="product-subtitle">
           <?php echo do_shortcode( get_post_meta( get_the_id(), 'subtitle', true ) ); ?>
         </h2>
-
         <a href="
         <?php echo do_shortcode( get_post_meta( get_the_id(), 'amazon', true ) ); ?>
         " target="_blank">
@@ -42,11 +39,9 @@
         </a>
 
         <span class="share-product-header">SHARE:</span>
-
         <div class="social-product-wrap">
           <?php echo do_shortcode('[addtoany buttons="facebook,twitter,google_plus,pinterest,tumblr"]'); ?>
         </div>
-
       </div> <!-- left-product-col -->
     </div> <!-- product col wrap -->
 
@@ -67,10 +62,7 @@
       </div>
 
   </div> <!-- product content wrap -->
-  <!-- content -->
-
 
 </div> <!-- product-content-wrap -->
 
-
-  <?php get_footer(); ?>
+<?php get_footer(); ?>
