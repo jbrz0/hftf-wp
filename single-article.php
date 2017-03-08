@@ -24,6 +24,11 @@
 
     <div class="col-md-12 post-content">
 
+      <span class="share-product-header">SHARE:</span>
+      <div class="social-product-wrap">
+        <?php echo do_shortcode('[addtoany buttons="facebook,twitter,google_plus,pinterest,tumblr"]'); ?>
+      </div>
+
     		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
     			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     				<?php the_content(); ?>
