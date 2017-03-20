@@ -1797,16 +1797,25 @@ Articles Page
   .article-thumb {
     display: none;
   }
+  /*
   .text-article-title p {
     padding-bottom: 40px;
   }
+  */
 }
 
 article {
-  min-height: 150px;
+  /* min-height: 150px; */
   width: 100%;
   background: #08425C;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+
+  padding-bottom: 0px;
+
   margin-top: 15px;
 }
 
@@ -1831,7 +1840,19 @@ article:hover {
   font-size: 1em;
   color: #F7F6F9;
   padding-left: 22px;
-  align-items: stretch;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: 1;           /* IE 10 */
+  flex: 1;
+}
+
+@media (min-width: 753px) {
+  .text-article-title {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .text-article-title h1 {
@@ -1849,6 +1870,13 @@ article:hover {
   top: 44%;
   transform: translateY(-50%);
   padding-right: 20px;
+}
+
+@media (max-width: 752px) {
+  .text-article-title-inner {
+    transform: none;
+    top: 0px;
+  }
 }
 
 .margin-header-img {
