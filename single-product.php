@@ -33,8 +33,8 @@
         <?php echo do_shortcode( get_post_meta( get_the_id(), 'amazon', true ) ); ?>
         " target="_blank">
           <button class="amazon-btn">
-            <i class="fa fa-amazon" aria-hidden="true"></i>
-            <span>&nbsp;VIEW PRODUCT ON AMAZON</span>
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            <span>&nbsp;BUY PRODUCT</span>
           </button>
         </a>
 
