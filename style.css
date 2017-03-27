@@ -98,6 +98,12 @@ h5, h6, p {
   margin: 34px auto;
 }
 
+@media (min-width: 992px) {
+  .logo {
+    margin-left: -14px;
+  }
+}
+
 .logo-header-link {
   max-width: 600px;
   margin: auto;
@@ -386,9 +392,14 @@ input.mailing-list-top:-moz-placeholder {
   margin-top: 30px;
 }
 
+.sidebar-header:hover {
+  background-color: #FFC857;
+}
+
 .sidebar-header h2 {
   font-size: 22px;
   color: #F7F6F9;
+  margin-bottom: 20px;
 }
 
 .sidebar-left-header {
@@ -397,6 +408,10 @@ input.mailing-list-top:-moz-placeholder {
 
 .sidebar-right-header {
   background-color: #DB324D;
+}
+
+a.sidebar-link:hover {
+  text-decoration: none;
 }
 
 .sidebar-left-sm {

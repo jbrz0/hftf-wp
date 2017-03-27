@@ -6,9 +6,11 @@
       title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
   </form>
 
-  <div class="sidebar-header sidebar-right-header">
-    <h2>ARTICLES</h2>
-  </div>
+  <a href="<?php echo home_url( '/' ); ?>category/articles/" class="sidebar-link">
+    <div class="sidebar-header sidebar-right-header">
+      <h2>ARTICLES</h2>
+    </div>
+  </a>
 
   <div class="sidebar-left-content">
     <span class="sidebar-list-header">

@@ -9,9 +9,11 @@
         </div>
     </form>
 
-    <div class="sidebar-header sidebar-left-header">
-      <h2>PRODUCTS</h2>
-    </div>
+    <a href="<?php echo home_url( '/' ); ?>category/products/" class="sidebar-link">
+      <div class="sidebar-header sidebar-left-header">
+          <h2>PRODUCTS</h2>
+      </div>
+    </a>
 
     <div class="sidebar-left-content">
       <span class="sidebar-list-header">
