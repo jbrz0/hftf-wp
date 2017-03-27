@@ -98,12 +98,6 @@ h5, h6, p {
   margin: 34px auto;
 }
 
-@media (min-width: 992px) {
-  .logo {
-    margin-left: -14px;
-  }
-}
-
 .logo-header-link {
   max-width: 600px;
   margin: auto;
