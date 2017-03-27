@@ -95,7 +95,7 @@ h5, h6, p {
   width: 100%;
   max-width: 600px;
   display: block;
-  margin: 44px auto;
+  margin: 34px auto;
 }
 
 .logo-header-link {
@@ -502,17 +502,17 @@ Page Middle Section
 
 .post-home-txt {
   display: inline-block;
-  padding: 12px 18px 17px 18px;
   word-break: normal;
 }
 
 .post-home-txt h2 {
   font-size: 20px;
+  color: #470DF4;
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
-  .post-home-txt {
-    padding: 10px 15px 17px;
+  .post-home-txt h2 {
+    font-size: 1.1em;
   }
   .post-home-txt h2,
   .post-home-txt h4,
@@ -521,21 +521,18 @@ Page Middle Section
   }
 }
 
-@media (max-width: 1280px) {
-  .post-home-txt h2 {
-    font-size: 20px;
-  }
-}
-
 .post-lg {
-  background: #08425C;
-  overflow: auto;
-  border: 1px solid #08425C;
   position: relative;
+  background-size: cover;
 }
 
 .post-lg-txt-wrap {
   overflow: scroll;
+}
+
+.post-lg .img-wrap-home {
+  height: 370px;
+  background-size: cover;
 }
 
 .post-lg img {
@@ -569,7 +566,6 @@ Page Middle Section
 .post-link-wrap {
   color: #F7F6F9;
   display: block;
-
   height: 100%;
   width: 100%;
 }
@@ -580,24 +576,21 @@ Page Middle Section
 }
 
 .post-tall {
-  background: #08425C;
   padding: 0;
   height: auto;
-  padding-bottom: 15px;
-  border: 1px solid #08425C;
+  padding-bottom: 10px;
+}
+
+.post-lg .post-home-txt {
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 .post-tall .post-home-txt {
   transform: none !important;
   top: auto;
   position: static;
-  margin: 30px auto 20px;
-}
-
-@media (max-width: 767px) {
-  .post-tall .post-home-txt {
-    margin: 10px 10px 0px;
-  }
+  margin: 0px auto;
 }
 
 .post-tall img {
@@ -621,7 +614,6 @@ Page Middle Section
   background: #08425C;
   padding: 0;
   height: 560px;
-  border: 1px solid #08425C;
 }
 
 .post-wide img {
@@ -636,6 +628,7 @@ Page Middle Section
   padding-right: 10px;
   padding-left: 0;
   margin-top: 15px;
+  clear: both;
 }
 
 .post-tall-wrap-second {
@@ -667,35 +660,15 @@ Page Middle Section
 }
 
 .post-tall-inner, .post-tall-inner-txt {
-  background: #08425C;
-  padding-bottom: 60px;
-  border: 1px solid #08425C;
-  height: 470px;
+  padding-bottom: 10px;
 }
 
 .post-tall-inner img {
   width: 100%;
 }
 
-.post-tall-inner .post-home-txt {
-  padding-top: 237px;
-}
-
 .post-tall-top {
   margin-top: 15px;
-  height: 455px;
-}
-
-@media(max-width: 1390px) {
-  .post-tall-top {
-    height: 455px;
-  }
-}
-
-@media (max-width: 991px) {
-  .post-tall-top {
-    height: 520px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -721,20 +694,11 @@ Page Middle Section
   position: relative;
 }
 
-.post-home-txt {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 @media (max-width: 767px) {
   .post-home-txt {
     position: static;
     top: auto;
     transform: none;
-  }
-  .post-tall-inner .post-home-txt {
-    padding: 15px 40px;
   }
   .post-tall-inner, .post-tall-inner-txt {
     padding-bottom: 20px;
@@ -790,7 +754,6 @@ Page Middle Section
 
 @media (min-width: 1200px) and (max-width: 1360px) {
   .post-tall-inner .post-home-txt {
-    padding: 20px !important;
     transform: none !important;
   }
   .post-tall-inner-txt .post-home-txt p {
@@ -818,6 +781,7 @@ Footer
   clear: both;
   background: #0C0C0C;
   padding: 60px 30px;
+  margin-top: 20px;
 }
 
 .footer-logo-wrap {
@@ -1130,6 +1094,7 @@ nav:hover {
   padding: 20px;
   margin-top: 20px;
   width: 100%;
+  border-radius: 0px;
 }
 
 .search-modal {
@@ -1797,15 +1762,9 @@ Articles Page
   .article-thumb {
     display: none;
   }
-  /*
-  .text-article-title p {
-    padding-bottom: 40px;
-  }
-  */
 }
 
 article {
-  /* min-height: 150px; */
   width: 100%;
   background: #08425C;
 
@@ -1843,8 +1802,8 @@ article:hover {
   padding-top: 20px;
   padding-bottom: 20px;
 
-  -webkit-flex: 1;       /* Safari 6.1+. iOS 7.1+, BB10 */
-  -ms-flex: 1;           /* IE 10 */
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
@@ -1864,9 +1823,7 @@ article:hover {
 }
 
 .text-article-title-inner {
-  /*position: absolute;*/
   position: relative;
-  /*top: 50%;*/
   top: 44%;
   transform: translateY(-50%);
   padding-right: 20px;

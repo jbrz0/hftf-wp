@@ -8,15 +8,11 @@
           <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
           <div class="post-lg">
             <a href="<?php echo get_permalink() ?>" class="post-link-wrap">
-            <div class="col-sm-7 img-wrap-home" style="padding: 0;">
-              <img src="<?php echo $url ?>" alt="">
-            </div>
-            <div class="col-sm-5 post-lg-txt-wrap">
+            <div class="col-sm-12 img-wrap-home" style="background-image: url(<?php echo $url ?>);"></div>
               <div class="post-home-txt">
                 <h2><?php the_title(); ?></h2>
                 <h4><?php the_time('F jS, Y'); ?></h4>
               </div>
-            </div>
             </a>
           </div>
       	<?php endwhile; ?>
