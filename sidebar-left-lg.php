@@ -36,6 +36,18 @@
         <a href="<?php echo home_url( '/' ); ?>category/products/locks/">
           <li><span>Locks</span></li>
         </a>
+        <a href="<?php echo home_url( '/' ); ?>category/products/cameras/">
+          <li><span>Cameras</span></li>
+        </a>
+        <a href="<?php echo home_url( '/' ); ?>category/products/gadgets/">
+          <li><span>Gadgets</span></li>
+        </a>
+        <a href="<?php echo home_url( '/' ); ?>category/products/routers/">
+          <li><span>Routers</span></li>
+        </a>
+        <a href="<?php echo home_url( '/' ); ?>category/products/voice-control/">
+          <li><span>Voice Control</span></li>
+        </a>
       </ul>
 
       <span class="sidebar-list-header">

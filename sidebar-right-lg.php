@@ -18,6 +18,9 @@
     </span>
 
     <ul class="sidebar-list sidebar-list-right">
+      <a href="<?php echo home_url( '/' ); ?>category/articles/general/">
+        <li><span>General</span></li>
+      </a>
       <a href="<?php echo home_url( '/' ); ?>category/articles/apps/">
         <li><span>Apps</span></li>
       </a>
