@@ -15,6 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="-9LEjFetmLoVc7Q35RWj62vG_SypUSRoe6GPmI1lh3E" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
 <title>HFTF: <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
